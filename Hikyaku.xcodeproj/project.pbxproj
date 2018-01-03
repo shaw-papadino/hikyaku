@@ -11,7 +11,17 @@
 		6D2636D11FF24DDE00C26195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2636D01FF24DDE00C26195 /* ViewController.swift */; };
 		6D2636D41FF24DDE00C26195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2636D21FF24DDE00C26195 /* Main.storyboard */; };
 		6D2636D61FF24DDE00C26195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D2636D51FF24DDE00C26195 /* Assets.xcassets */; };
-		6D2636D91FF24DDE00C26195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2636D71FF24DDE00C26195 /* LaunchScreen.storyboard */; };
+		6D3645A21FF4D6DE00015E81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D3645A11FF4D6DE00015E81 /* GoogleService-Info.plist */; };
+		6D59730F1FF25109001E8568 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59730E1FF25109001E8568 /* MainViewController.swift */; };
+		6D5973111FF2511C001E8568 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5973101FF2511C001E8568 /* LeftViewController.swift */; };
+		6DA0C0811FFB7E0E00FF498E /* idokeidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0C0801FFB7E0E00FF498E /* idokeidoViewController.swift */; };
+		6DA0C0831FFC606900FF498E /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0C0821FFC606900FF498E /* Const.swift */; };
+		6DB67ABD1FF33B100010E1E0 /* WriteLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB67ABC1FF33B100010E1E0 /* WriteLetterViewController.swift */; };
+		6DB67ABF1FF33CA10010E1E0 /* SuccessLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB67ABE1FF33CA10010E1E0 /* SuccessLetterViewController.swift */; };
+		6DB67AC11FF3421F0010E1E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB67AC01FF3421F0010E1E0 /* LoginViewController.swift */; };
+		6DDECBF31FF25202008DB09B /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDECBF21FF25202008DB09B /* SlideViewController.swift */; };
+		6DEF9B381FF7DC4D004B23C2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF9B371FF7DC4D004B23C2 /* AccountViewController.swift */; };
+		C5D9352DF80E1709D467D108 /* Pods_Hikyaku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E6F896BA0927518067B5FD /* Pods_Hikyaku.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +30,22 @@
 		6D2636D01FF24DDE00C26195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D2636D31FF24DDE00C26195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D2636D51FF24DDE00C26195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6D2636D81FF24DDE00C26195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D2636DA1FF24DDE00C26195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D3645A11FF4D6DE00015E81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6D59730E1FF25109001E8568 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6D5973101FF2511C001E8568 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		6D73E20F1FF39D3700E98C91 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = "Pods/../build/Debug-iphoneos/FacebookCore/FacebookCore.framework"; sourceTree = "<group>"; };
+		6DA0C0801FFB7E0E00FF498E /* idokeidoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idokeidoViewController.swift; sourceTree = "<group>"; };
+		6DA0C0821FFC606900FF498E /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		6DA0C0841FFD1D6B00FF498E /* Hikyaku.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hikyaku.entitlements; sourceTree = "<group>"; };
+		6DB67ABC1FF33B100010E1E0 /* WriteLetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteLetterViewController.swift; sourceTree = "<group>"; };
+		6DB67ABE1FF33CA10010E1E0 /* SuccessLetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessLetterViewController.swift; sourceTree = "<group>"; };
+		6DB67AC01FF3421F0010E1E0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6DDECBF21FF25202008DB09B /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		6DEF9B371FF7DC4D004B23C2 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		BE4488E218181722C4BEF8C8 /* Pods-Hikyaku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hikyaku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hikyaku/Pods-Hikyaku.debug.xcconfig"; sourceTree = "<group>"; };
+		C2FF56053D90621BD6B587A8 /* Pods-Hikyaku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hikyaku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hikyaku/Pods-Hikyaku.release.xcconfig"; sourceTree = "<group>"; };
+		E9E6F896BA0927518067B5FD /* Pods_Hikyaku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hikyaku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5D9352DF80E1709D467D108 /* Pods_Hikyaku.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +65,8 @@
 			children = (
 				6D2636CD1FF24DDE00C26195 /* Hikyaku */,
 				6D2636CC1FF24DDE00C26195 /* Products */,
+				94AB54E089BA1FD8F35CF07E /* Pods */,
+				8CE262C4495BDCFE96C71412 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +81,42 @@
 		6D2636CD1FF24DDE00C26195 /* Hikyaku */ = {
 			isa = PBXGroup;
 			children = (
+				6DA0C0841FFD1D6B00FF498E /* Hikyaku.entitlements */,
 				6D2636CE1FF24DDE00C26195 /* AppDelegate.swift */,
 				6D2636D01FF24DDE00C26195 /* ViewController.swift */,
+				6D59730E1FF25109001E8568 /* MainViewController.swift */,
+				6DDECBF21FF25202008DB09B /* SlideViewController.swift */,
+				6D5973101FF2511C001E8568 /* LeftViewController.swift */,
 				6D2636D21FF24DDE00C26195 /* Main.storyboard */,
+				6DA0C0801FFB7E0E00FF498E /* idokeidoViewController.swift */,
+				6DEF9B371FF7DC4D004B23C2 /* AccountViewController.swift */,
+				6DA0C0821FFC606900FF498E /* Const.swift */,
+				6DB67AC01FF3421F0010E1E0 /* LoginViewController.swift */,
+				6DB67ABE1FF33CA10010E1E0 /* SuccessLetterViewController.swift */,
+				6DB67ABC1FF33B100010E1E0 /* WriteLetterViewController.swift */,
 				6D2636D51FF24DDE00C26195 /* Assets.xcassets */,
-				6D2636D71FF24DDE00C26195 /* LaunchScreen.storyboard */,
+				6D3645A11FF4D6DE00015E81 /* GoogleService-Info.plist */,
 				6D2636DA1FF24DDE00C26195 /* Info.plist */,
 			);
 			path = Hikyaku;
+			sourceTree = "<group>";
+		};
+		8CE262C4495BDCFE96C71412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D73E20F1FF39D3700E98C91 /* FacebookCore.framework */,
+				E9E6F896BA0927518067B5FD /* Pods_Hikyaku.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94AB54E089BA1FD8F35CF07E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE4488E218181722C4BEF8C8 /* Pods-Hikyaku.debug.xcconfig */,
+				C2FF56053D90621BD6B587A8 /* Pods-Hikyaku.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D2636DD1FF24DDE00C26195 /* Build configuration list for PBXNativeTarget "Hikyaku" */;
 			buildPhases = (
+				B96776215B020D4FF0F68B0F /* [CP] Check Pods Manifest.lock */,
 				6D2636C71FF24DDE00C26195 /* Sources */,
 				6D2636C81FF24DDE00C26195 /* Frameworks */,
 				6D2636C91FF24DDE00C26195 /* Resources */,
+				37AAA165F96065128CC2762B /* [CP] Embed Pods Frameworks */,
+				7BB27A6DE27F4550B04DC89F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +154,13 @@
 				TargetAttributes = {
 					6D2636CA1FF24DDE00C26195 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 57BH6DA5U5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,21 +187,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D2636D91FF24DDE00C26195 /* LaunchScreen.storyboard in Resources */,
 				6D2636D61FF24DDE00C26195 /* Assets.xcassets in Resources */,
 				6D2636D41FF24DDE00C26195 /* Main.storyboard in Resources */,
+				6D3645A21FF4D6DE00015E81 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37AAA165F96065128CC2762B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hikyaku/Pods-Hikyaku-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BB27A6DE27F4550B04DC89F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hikyaku/Pods-Hikyaku-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B96776215B020D4FF0F68B0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D2636C71FF24DDE00C26195 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D59730F1FF25109001E8568 /* MainViewController.swift in Sources */,
+				6DDECBF31FF25202008DB09B /* SlideViewController.swift in Sources */,
+				6DB67ABD1FF33B100010E1E0 /* WriteLetterViewController.swift in Sources */,
+				6D5973111FF2511C001E8568 /* LeftViewController.swift in Sources */,
+				6DB67AC11FF3421F0010E1E0 /* LoginViewController.swift in Sources */,
 				6D2636D11FF24DDE00C26195 /* ViewController.swift in Sources */,
 				6D2636CF1FF24DDE00C26195 /* AppDelegate.swift in Sources */,
+				6DB67ABF1FF33CA10010E1E0 /* SuccessLetterViewController.swift in Sources */,
+				6DA0C0811FFB7E0E00FF498E /* idokeidoViewController.swift in Sources */,
+				6DEF9B381FF7DC4D004B23C2 /* AccountViewController.swift in Sources */,
+				6DA0C0831FFC606900FF498E /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +271,6 @@
 				6D2636D31FF24DDE00C26195 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6D2636D71FF24DDE00C26195 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D2636D81FF24DDE00C26195 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,24 +371,46 @@
 		};
 		6D2636DE1FF24DDE00C26195 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE4488E218181722C4BEF8C8 /* Pods-Hikyaku.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hikyaku/Hikyaku.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 57BH6DA5U5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookCore",
+				);
 				INFOPLIST_FILE = Hikyaku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shouya.okayama.Hikyaku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6D2636DF1FF24DDE00C26195 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2FF56053D90621BD6B587A8 /* Pods-Hikyaku.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hikyaku/Hikyaku.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 57BH6DA5U5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookCore",
+				);
 				INFOPLIST_FILE = Hikyaku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shouya.okayama.Hikyaku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +434,7 @@
 				6D2636DF1FF24DDE00C26195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
