@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0BDF181FFDF808001C9E4F /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0BDF171FFDF808001C9E4F /* userData.swift */; };
 		6D2636CF1FF24DDE00C26195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2636CE1FF24DDE00C26195 /* AppDelegate.swift */; };
 		6D2636D11FF24DDE00C26195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2636D01FF24DDE00C26195 /* ViewController.swift */; };
 		6D2636D41FF24DDE00C26195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2636D21FF24DDE00C26195 /* Main.storyboard */; };
@@ -21,10 +22,10 @@
 		6DB67AC11FF3421F0010E1E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB67AC01FF3421F0010E1E0 /* LoginViewController.swift */; };
 		6DDECBF31FF25202008DB09B /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDECBF21FF25202008DB09B /* SlideViewController.swift */; };
 		6DEF9B381FF7DC4D004B23C2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF9B371FF7DC4D004B23C2 /* AccountViewController.swift */; };
-		C5D9352DF80E1709D467D108 /* Pods_Hikyaku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E6F896BA0927518067B5FD /* Pods_Hikyaku.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D0BDF171FFDF808001C9E4F /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		6D2636CB1FF24DDE00C26195 /* Hikyaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hikyaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2636CE1FF24DDE00C26195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2636D01FF24DDE00C26195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		6DEF9B371FF7DC4D004B23C2 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		BE4488E218181722C4BEF8C8 /* Pods-Hikyaku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hikyaku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hikyaku/Pods-Hikyaku.debug.xcconfig"; sourceTree = "<group>"; };
 		C2FF56053D90621BD6B587A8 /* Pods-Hikyaku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hikyaku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hikyaku/Pods-Hikyaku.release.xcconfig"; sourceTree = "<group>"; };
-		E9E6F896BA0927518067B5FD /* Pods_Hikyaku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hikyaku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5D9352DF80E1709D467D108 /* Pods_Hikyaku.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +92,7 @@
 				6DA0C0821FFC606900FF498E /* Const.swift */,
 				6DB67AC01FF3421F0010E1E0 /* LoginViewController.swift */,
 				6DB67ABE1FF33CA10010E1E0 /* SuccessLetterViewController.swift */,
+				6D0BDF171FFDF808001C9E4F /* userData.swift */,
 				6DB67ABC1FF33B100010E1E0 /* WriteLetterViewController.swift */,
 				6D2636D51FF24DDE00C26195 /* Assets.xcassets */,
 				6D3645A11FF4D6DE00015E81 /* GoogleService-Info.plist */,
@@ -105,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				6D73E20F1FF39D3700E98C91 /* FacebookCore.framework */,
-				E9E6F896BA0927518067B5FD /* Pods_Hikyaku.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +249,7 @@
 			files = (
 				6D59730F1FF25109001E8568 /* MainViewController.swift in Sources */,
 				6DDECBF31FF25202008DB09B /* SlideViewController.swift in Sources */,
+				6D0BDF181FFDF808001C9E4F /* userData.swift in Sources */,
 				6DB67ABD1FF33B100010E1E0 /* WriteLetterViewController.swift in Sources */,
 				6D5973111FF2511C001E8568 /* LeftViewController.swift in Sources */,
 				6DB67AC11FF3421F0010E1E0 /* LoginViewController.swift in Sources */,
@@ -378,12 +378,15 @@
 				CODE_SIGN_ENTITLEMENTS = Hikyaku/Hikyaku.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57BH6DA5U5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookCore",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Hikyaku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shouya.okayama.Hikyaku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,12 +404,15 @@
 				CODE_SIGN_ENTITLEMENTS = Hikyaku/Hikyaku.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57BH6DA5U5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookCore",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Hikyaku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shouya.okayama.Hikyaku;
 				PRODUCT_NAME = "$(TARGET_NAME)";

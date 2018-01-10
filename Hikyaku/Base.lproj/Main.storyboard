@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="twN-GA-xLi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="twN-GA-xLi">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -377,7 +377,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="vader"/>
                                 <connections>
-                                    <segue destination="rq8-5Y-z0S" kind="show" id="MpH-bG-bed"/>
+                                    <action selector="friendButton:" destination="XNP-zg-7TM" eventType="touchUpInside" id="ufL-zN-aZK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8D-Rw-gpm">
@@ -457,14 +457,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-km-X26">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-km-X26">
                                 <rect key="frame" x="26" y="61" width="268" height="242"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="242" id="Q2I-C8-xJP"/>
                                 </constraints>
-                                <string key="text">本文----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.53618847150259064" green="0.53618847150259064" blue="0.53618847150259064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".Hiragino Kaku Gothic Interface" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EI-Qo-Q8w">
@@ -473,7 +473,6 @@
                                 <state key="normal" title="送信"/>
                                 <connections>
                                     <action selector="sendButton:" destination="rq8-5Y-z0S" eventType="touchUpInside" id="Rdi-4x-avX"/>
-                                    <segue destination="Iva-v0-CT4" kind="show" id="WU6-fk-y0p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -518,7 +517,6 @@
                                 <state key="normal" title="HOME"/>
                                 <connections>
                                     <action selector="homeButton:" destination="Iva-v0-CT4" eventType="touchUpInside" id="1my-4C-uBi"/>
-                                    <segue destination="XNP-zg-7TM" kind="show" id="Fu6-Hc-A9g"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宛先" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM9-m0-fZj">

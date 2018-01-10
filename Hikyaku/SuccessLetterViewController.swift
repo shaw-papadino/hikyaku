@@ -12,10 +12,11 @@ class SuccessLetterViewController: UIViewController {
 
     @IBOutlet weak var atesakiLabel: UILabel!
     @IBAction func homeButton(_ sender: Any) {
+        let nextView = storyboard?.instantiateViewController(withIdentifier: "Slide")
+        present(nextView!, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

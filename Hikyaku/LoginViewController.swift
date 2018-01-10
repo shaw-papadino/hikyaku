@@ -11,12 +11,20 @@ import Firebase
 import FirebaseAuth
 import FacebookLogin
 import FacebookCore
+import FirebaseDatabase
+import CoreLocation
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, CLLocationManagerDelegate {
+    
+    
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
     var userProfile : NSDictionary!
+    var locationManager: CLLocationManager!
+    var latitudo: Double!
+    var longitude: Double!
+
     
     
     @IBAction func facebookLoginButton(_ sender: Any) {
@@ -27,6 +35,8 @@ class LoginViewController: UIViewController {
                 print("token:\(token),\(permission),\(declinePemisson)")
                 let credential = FacebookAuthProvider.credential(withAccessToken: token.authenticationToken)
                 self.signIn(credential: credential)
+                let idokeidoViewController = self.storyboard?.instantiateViewController(withIdentifier: "IdoKeido")
+                self.present(idokeidoViewController!, animated: true, completion: nil)
             case let .failed(error):
                 print("error:\(error)")
             case .cancelled:
@@ -40,10 +50,19 @@ class LoginViewController: UIViewController {
             if let error = error {
                 print("error:\(error)")
                 return
-            } else {
-                self.getUserInfo()
             }
-            return
+//            let user = Auth.auth().currentUser
+//            if let user = user {
+//                let userId = user.uid
+//                let name = user.displayName
+//                if name != nil {
+//                    let userRef = Database.database().reference().child(Const.Users).child(userId)
+//                    let userData = ["name": name]
+//
+//                    userRef.setValue(userData)
+//                }
+//            }
+            self.getUserInfo()
         }
     }
     @IBAction func LoginButton(_ sender: Any) {
@@ -114,29 +133,56 @@ class LoginViewController: UIViewController {
     
     func getUserInfo (){
         //Facebookのユーザー情報を取得する処理
-        GraphRequest(graphPath: "me", parameters: ["fields": "name, picture.type(large"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: GraphAPIVersion.defaultVersion).start({
+        GraphRequest(graphPath: "me", parameters: ["fields": "name, picture.type(large)"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: GraphAPIVersion.defaultVersion).start({
             response, result in
-                switch result {
-                case .success(let response) :
-                    print("response:\(response)")
-                    // プロフィール情報をディクショナリに入れる
-                    self.userProfile = result as! NSDictionary
-                    print(self.userProfile)
-                    let profileImageURL : String = ((self.userProfile.object(forKey: "picture") as AnyObject).object(forKey: "data") as AnyObject).object(forKey: "url") as! String
-                    let profileImage = UIImage(data: try! Data(contentsOf: URL(string: profileImageURL)!))
-                    let name = self.userProfile.object(forKey:"name") as? String
-                    let imageData2 = UIImageJPEGRepresentation(profileImage!, 0.5)
-                    let imageString = imageData2?.base64EncodedString(options: .lineLength64Characters)
-                    let userID = Auth.auth().currentUser!.uid
+            switch result {
+            case .success(let response) :
+                print("response:\(response)")
+                if let alldata = response.dictionaryValue {
+                    let picture: NSDictionary = (alldata["picture"] as? NSDictionary)!
+                    let data: NSDictionary = (picture["data"] as? NSDictionary)!
+                    let url = (data as? [String: Any])?["url"]
+                    print(url!)
+                    let urls: String = String(describing: url!)
                     
+                    let profileimg = try! UIImage(data: Data(contentsOf: URL(string: urls)!))
+                    let imageData = UIImageJPEGRepresentation(profileimg!, 0.5)
+                    let imageString = imageData?.base64EncodedString(options: .lineLength64Characters)
+                    let userID = Auth.auth().currentUser!.uid
+                    let name = Auth.auth().currentUser!.displayName
                     if imageString != nil {
                         let userRef = Database.database().reference().child(Const.Users).child(userID)
                         let userData = ["image": imageString, "name": name]
                         userRef.setValue(userData)
-                     
-                        let idokeidoViewController = self.storyboard?.instantiateViewController(withIdentifier: "IdoKeido")
-                        self.present(idokeidoViewController!, animated: true, completion: nil)
                     }
+                }
+                
+                break
+            case .failed(let error):
+                print("error:\(error.localizedDescription)")
+                
+            }
+            
+        })
+    }
+                    // プロフィール情報をディクショナリに入れる
+                    //self.userProfile = result as! NSDictionary
+//                    print(self.userProfile)
+//                    let profileImageURL : String = ((self.userProfile.object(forKey: "picture") as AnyObject).object(forKey: "data") as AnyObject).object(forKey: "url") as! String
+//                    let profileImage = UIImage(data: try! Data(contentsOf: URL(string: profileImageURL)!))
+//                    let name = self.userProfile.object(forKey:"name") as? String
+//                    let imageData2 = UIImageJPEGRepresentation(profileImage!, 0.5)
+//                    let imageString = imageData2?.base64EncodedString(options: .lineLength64Characters)
+//                    let userID = Auth.auth().currentUser!.uid
+//
+//                    if imageString != nil {
+//                        let userRef = Database.database().reference().child(Const.Users).child(userID)
+//                        let userData = ["image": imageString, "name": name]
+//                        userRef.setValue(userData)
+//
+//                        let idokeidoViewController = self.storyboard?.instantiateViewController(withIdentifier: "IdoKeido")
+//                        self.present(idokeidoViewController!, animated: true, completion: nil)
+//                    }
                 //let data: [String : AnyObject] = response
                 //let name = data["name"] as! String
                 //let profilePictureURLStr = (data["picture"]!["data"]!! as! [String : AnyObject])["url"]
@@ -146,14 +192,7 @@ class LoginViewController: UIViewController {
                 //let imageData2 = UIImageJPEGRepresentation(image!, 0.5)
                 //let imageString = imageData2?.base64EncodedString(options: .lineLength64Characters)
 
-                    break
-                case .failed(let error):
-                    print("error:\(error.localizedDescription)")
-                
-                }
-            
-            })
-        }
+                    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -162,6 +201,7 @@ class LoginViewController: UIViewController {
         if Auth.auth().currentUser != nil {
             // ログインしているときの処理
             // viewDidAppear内でpresent()を呼び出しても表示されないためメソッドが終了してから呼ばれるようにする
+            
             DispatchQueue.main.async {
                 let slideViewController = self.storyboard?.instantiateViewController(withIdentifier: "Slide")
                 self.present(slideViewController!, animated: true, completion: nil)
@@ -173,6 +213,8 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     /*
     // MARK: - Navigation
 

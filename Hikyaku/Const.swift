@@ -10,6 +10,7 @@ import Foundation
 
 struct Const {
     static let Users = "users"
+    static let Letters = "letters"
 }
 
     
